@@ -26,4 +26,15 @@ class MethodsTests < Minitest::Test
     assert_output(test_string){ Boy.I.say.Boy.i.say test_string }
     assert_output(test_string){ Boy.I.say.Boy.i.say.boy.i.say test_string }
   end
+
+  def test_go_away
+    ret = assert_raises(SystemExit){I.say.go_away 0}
+    assert_equal 0, ret.status
+
+    ret = assert_raises(SystemExit){I.say.go_away 1}
+    assert_equal 1, ret.status
+
+    ret = assert_raises(SystemExit){Boy.I.say.go_away 1}
+    assert_equal 1, ret.status
+  end
 end
