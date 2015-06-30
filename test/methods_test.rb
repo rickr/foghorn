@@ -5,6 +5,9 @@ class MethodsTests < Minitest::Test
   def test_i_say_puts_a_string
     assert_respond_to I, :say
     assert_output("test\n"){I.say('test')}
+
+    assert_output("test\n"){Boy.I.say('test')}
+    assert_output("test\n"){Boy.i.say('test')}
   end
 
   def test_i_say_recursive
@@ -18,5 +21,9 @@ class MethodsTests < Minitest::Test
 
     # Chaining I's
     assert_output(test_string){ I.I.I.say test_string }
+
+    # Chaining Boy's
+    assert_output(test_string){ Boy.I.say.Boy.i.say test_string }
+    assert_output(test_string){ Boy.I.say.Boy.i.say.boy.i.say test_string }
   end
 end

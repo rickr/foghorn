@@ -5,6 +5,11 @@ module Foghorn::Methods
     end
     self.singleton_class.send(:alias_method, :I, :i) # This is kind of scary...
 
+    def self.boy
+      Foghorn::Methods::I
+    end
+    self.singleton_class.send(:alias_method, :Boy, :boy)
+
     class Say
       def initialize(string = nil)
         puts string unless string.nil?
@@ -19,4 +24,6 @@ module Foghorn::Methods
       end
     end
   end
+
+  class Boy < I;  end
 end
