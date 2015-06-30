@@ -2,6 +2,7 @@ require "foghorn/version"
 
 module Foghorn
   class I
+
     class Say
       def initialize(string = nil)
         puts string unless string.nil?
@@ -11,10 +12,7 @@ module Foghorn
     def self.i
       I
     end
-
-    def self.I
-      I
-    end
+    self.singleton_class.send(:alias_method, :I, :i) # This is kind of scary...
 
     def self.say(string_or_class = nil)
       if string_or_class
