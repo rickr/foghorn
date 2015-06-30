@@ -10,12 +10,6 @@ module Foghorn::Methods
     end
     self.singleton_class.send(:alias_method, :Boy, :boy)
 
-    class Say
-      def initialize(string = nil)
-        puts string unless string.nil?
-      end
-    end
-
     def self.say(string_or_class = nil)
       if string_or_class
         puts string_or_class
