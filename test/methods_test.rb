@@ -1,4 +1,5 @@
 require_relative 'test_helper'
+include Foghorn::Methods
 
 class MethodsTests < Minitest::Test
   def test_i_say_puts_a_string
