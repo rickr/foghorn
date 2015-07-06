@@ -25,6 +25,7 @@ module Foghorn::Methods
         Foghorn::Methods::I
       end
     end
+    self.singleton_class.send(:alias_method, :boy, :say)
 
     def self.go_away(exit_code = 0)
       exit exit_code

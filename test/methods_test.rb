@@ -14,6 +14,7 @@ class MethodsTests < Minitest::Test
     test_string = "test string!\n"
     assert_output(test_string){ I.say.i.say test_string }
     assert_output(test_string){ I.say.i.say.i.say test_string }
+    assert_output(test_string){ Boy.I.say.boy test_string }
 
     # We can call the I method in the I class as well
     assert_output(test_string){ I.say.I.say test_string }
