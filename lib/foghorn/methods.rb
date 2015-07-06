@@ -2,8 +2,9 @@ module Foghorn::Methods
   # http://foghornleghornquotes.com/foghorn-leghorn-sayings/
 
   class I
-    # These class methods (and aliases allow us to 
-    # repeat ourselves repeat ourselves
+    # These class methods (and aliases) allow us to
+    # repeat ourselves repeat ourselves without using
+    # method missing
     def self.i
       Foghorn::Methods::I
     end
