@@ -70,7 +70,6 @@ module Foghorn::Exceptions
       self.phrases.sample
     end
   end
-
 end
 
 class StandardError
