@@ -25,7 +25,7 @@ class ExceptionsTests < Minitest::Test
       [1, 2, 3].first(4, 5)
     end
     arg_error = exception.to_s.split("\n").last
-    assert_equal('ArgumentError: wrong number of arguments (2 for 1)', arg_error)
+    assert_equal('wrong number of arguments (2 for 1)', arg_error)
   end
 
   def test_custom_message_is_used
@@ -33,7 +33,7 @@ class ExceptionsTests < Minitest::Test
       raise TypeError, 'this is a custom message'
     end
     custom_message = exception.to_s.split("\n").last
-    assert_equal 'TypeError: this is a custom message', custom_message
+    assert_equal 'this is a custom message', custom_message
   end
 
   def test_message_equals_to_s
@@ -41,5 +41,17 @@ class ExceptionsTests < Minitest::Test
       1 / 0
     end
     assert_equal exception.to_s.split("\n")[1..-1], exception.message.split("\n")[1..-1]
+  end
+
+  def test_no_second_line_if_no_message
+    exception = assert_raises do
+      raise NameError
+    end
+    assert_equal 1, exception.message.lines.count
+
+    exception = assert_raises do
+      raise IOError, 'With a message'
+    end
+    assert_equal 2, exception.message.lines.count
   end
 end
