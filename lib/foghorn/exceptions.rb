@@ -1,4 +1,8 @@
 module Foghorn::Exceptions
+  def self.included(base)
+    require_relative 'exceptions/standard_error'
+    ::StandardError.include(Foghorn::Exceptions::StandardError)
+  end
   class Foghorn::Exceptions::Base
     def self.phrases
       [
@@ -69,11 +73,7 @@ module Foghorn::Exceptions
     def self.phrase
       self.phrases.sample
     end
+
   end
 end
 
-class StandardError
-  def to_s(*args)
-    "#{Foghorn::Exceptions::Base.phrase}\n#{self.class}: #{super}"
-  end
-end
