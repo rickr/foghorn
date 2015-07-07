@@ -1,5 +1,5 @@
 # Foghorn
-https://github.com/rickr/foghorn/
+https://github.com/rickr/foghorn
 
 ![Foghorn Leghorn Photo](/docs/Foghorn_Leghorn.png?raw=true "Foghorn Leghorn")
 
@@ -28,7 +28,7 @@ divided by 0
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'foghorn-leghorn', '~> 1.0.0'
+gem 'foghorn-leghorn', '~> 1.0.1'
 ```
 
 And then execute:
