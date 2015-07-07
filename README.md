@@ -28,7 +28,7 @@ divided by 0
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'foghorn'
+gem 'foghorn-leghorn', '~> 1.0.0'
 ```
 
 And then execute:
@@ -37,7 +37,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install foghorn
+    $ gem install foghorn-leghorn
     
 ## Usage
 There are 3 modules you can include depending on how much Foghorn you think you can handle.
