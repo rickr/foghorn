@@ -1,7 +1,7 @@
 class Foghorn::Exceptions::Base
   def self.phrases
     phrase_path = File.join(File.dirname(__FILE__), '..', 'inc', 'phrases.txt')
-    File.readlines(phrase_path).map{|line| line.rstrip}
+    File.readlines(phrase_path).map(&:rstrip)
   end
 
   def self.phrase
