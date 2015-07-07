@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'foghorn/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'foghorn'
+  spec.name          = 'foghorn-leghorn'
   spec.version       = Foghorn::VERSION
   spec.authors       = ['RickR']
   spec.email         = ['rick@rudelinux.org']
