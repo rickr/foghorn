@@ -1,5 +1,5 @@
 # Foghorn
-https://github.com/rickr/foghorn/fork
+https://github.com/rickr/foghorn/
 
 ![Foghorn Leghorn Photo](/docs/Foghorn_Leghorn.png?raw=true "Foghorn Leghorn")
 
